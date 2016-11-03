@@ -1,0 +1,143 @@
+.description {
+  min-height: 700px;
+  margin-bottom: 80px;
+  padding-top: 260px;
+  background-color: #fff;
+  background-image: url('../img/description/description-things-bg.jpg'), url('../img/description/arrows.jpg');
+  background-repeat: no-repeat;
+  background-position: 186px 92px, 452px 310px;
+  font-size: 0;
+
+  &__content,
+  &__form {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  // content
+  &__content {
+    width: 52.04081632653061%; // 510 : 980
+    padding-top: 100px;
+
+    h2 {
+      margin-bottom: 30px;
+      font-family: $InglobalBoldItalic;
+      @include convertToRem(36, 36);
+      color: $pallete-primary;
+    }
+
+    p {
+      @include convertToRem(16, 24);
+    }
+  }
+
+  &__form {
+    position: relative;
+    width: 321px;
+    max-width: 321px;
+    min-height: 460px;
+    margin-left: calc(980px - 52.04081632653061% - 321px);
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    text-align: center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -126px;
+      right: 28px;
+      display: block;
+      width: 390px;
+      height: 204px;
+      background-image: url('../img/description/hat.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      z-index: 2;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    @include convertToRem(18, 24);
+    color: $pallete-title;
+  }
+
+  &__desc {
+    @include convertToRem(16, 24);
+    color: $pallete-form-text;
+  }
+}
+
+@media all and (max-width: $media-large) {
+  .description {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 7%;
+    padding-right: 7%;
+    background-image: url('../img/description/description-things-bg.jpg');
+    background-position: 30px 80px;
+
+    &__form {
+      margin-left: 0;
+    }
+  }
+}
+
+@media all and (max-width: $media-medium) {
+  .description {
+    justify-content: center;
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image: none;
+
+    &__content {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__form {
+      margin-top: 150px;
+    }
+  }
+}
+
+@media all and (max-width: $media-xs-small) {
+  .description {
+    margin-bottom: 40px;
+    padding-right: 0;
+    padding-left: 0;
+
+    &__content {
+      padding-top: 85px;
+      padding-left: 30px;
+      padding-right: 30px;
+      text-align: right;
+
+      h2 {
+        @include convertToRem(24, 24);
+      }
+
+      p {
+        @include convertToRem(14, 24);
+      }
+    }
+
+    &__form {
+      padding-bottom: 0;
+      border: none;
+      border-top: 1px solid #c8c8c8;
+      border-radius: 0;
+
+      &:before {
+        right: 0;
+        width: 419px;
+        background-image: url('../img/mobile/description-form-things.png');
+      }
+    }
+  }
+}

@@ -1,0 +1,351 @@
+.service {
+  margin-bottom: 75px;
+  padding-top: 110px;
+  background-image: url('../img/service/box-service-bg.jpg'), url('../img/service/pen-service-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center 285px, center 195px;
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+
+    &--leftside {
+      text-align: left;
+    }
+
+    &--rightside {
+      text-align: right;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-family: $InglobalBoldItalic;
+    @include convertToRem(36, 36);
+
+    &--rightside {
+      padding-left: 250px;
+      color: $pallete-secondary;
+    }
+
+    &--leftside {
+      padding-right: 250px;
+      color: $pallete-primary;
+    }
+  }
+
+  &__desc {
+    @include convertToRem(16, 24);
+    color: $pallete-text;
+
+    &--rightside {
+      padding-left: 145px;
+    }
+
+    &--leftside {
+      padding-right: 145px;
+    }
+  }
+
+  // list
+  &__list {
+    margin-top: 40px;
+    list-style: none;
+
+    &-item {
+      margin-bottom: 18px;
+    }
+
+    &-icon,
+    &-desc {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &-desc {
+      font-weight: bold;
+      @include convertToRem(16, 16);
+    }
+
+    &-icon {
+      position: relative;
+      width: 13px;
+      height: 13px;
+
+      span {
+        position: absolute;
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+      }
+
+      &--rightside {
+        margin-left: 10px;
+
+        span {
+          background-color: $pallete-secondary;
+        }
+      }
+
+      &--leftside {
+        margin-right: 10px;
+
+        span {
+          background-color: $pallete-primary
+        }
+      }
+
+      &--individual {
+        span {
+          top: 50%;
+          left: 50%;
+          margin-top: -2.5px;
+          margin-left: -2.5px;
+        }
+      }
+
+      &--pair {
+        span {
+          top: 50%;
+          margin-top: -2.5px;
+
+          &:first-child {
+            left: 0;
+          }
+
+          &:last-child {
+            right: 0;
+          }
+        }
+      }
+
+      &--mini {
+        span {
+          &:first-child {
+            top: 0;
+            left: 50%;
+            margin-left: -2.5px;
+          }
+
+          &:nth-child(2) {
+            bottom: 0;
+            left: 0;
+          }
+
+          &:last-child {
+            bottom: 0;
+            right: 0;
+          }
+        }
+      }
+
+      &--group {
+        span {
+          &:first-child {
+            top: 0;
+            left: 0;
+          }
+
+          &:nth-child(2) {
+            top: 0;
+            right: 0;
+          }
+
+          &:nth-child(3) {
+            bottom: 0;
+            left: 0;
+          }
+
+          &:last-child {
+            bottom: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__order {
+    width: 597px;
+    height: 272px;
+    margin: 0 auto;
+    margin-top: 180px;
+    padding-top: 78px;
+    padding-left: 196px;
+    background-image: url('../img/service/phone-service-bg.png'), url('../img/service/geometric-service-bg.png');
+    background-position: 60px top, left top,;
+    background-repeat: no-repeat;
+
+    p {
+      color: #fff;
+
+      strong {
+        font-weight: bold;
+      }
+
+      &:first-child {
+        @include convertToRem(18, 18);
+      }
+
+      &:last-child {
+        margin-top: 10px;
+        font-weight: bold;
+        font-style: italic;
+        @include convertToRem(36, 36);
+      }
+    }
+  }
+}
+
+@media all and (max-width: $media-large) {
+  .service {
+    background-image: url('../img/mobile/service-box-bg.jpg');
+
+    &__title {
+      &--rightside {
+        padding-left: 50px;
+      }
+
+      &--leftside {
+        padding-right: 50px;
+      }
+    }
+
+    &__item {
+      &--leftside {
+        padding-left: 30px;
+      }
+
+      &--rightside {
+        padding-right: 30px;
+      }
+    }
+
+    &__desc {
+      &--rightside {
+        padding-left: 100px;
+      }
+
+      &--leftside {
+        padding-right: 100px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: $media-medium) {
+  .service {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    background-position: 124% 25%;
+
+    &__item {
+      width: 100%;
+      padding: 0 30px;
+      text-align: center;
+
+      &:nth-child(2) {
+        margin-top: 40px;
+      }
+    }
+
+    &__title {
+      padding: 0;
+    }
+
+    &__desc {
+      padding: 0;
+    }
+
+    &__order {
+      position: relative;
+      width: 100%;
+      margin-top: 40px;
+      padding-left: 0;
+      background-image: url('../img/mobile/phone-service-bg.jpg');
+      background-repeat: no-repeat;
+      background-position: 60px 30px;
+      background-color: #0695f8;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: inherit;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        transform-origin: right bottom;
+        transform: skewY(3deg);
+      }
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: inherit;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        transform-origin: right top;
+        transform: skewY(-3deg);
+      }
+
+      p {
+        width: 290px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media all and (max-width: $media-small) {
+  .service {
+    margin-bottom: 100px;
+
+    &__order {
+      height: 235px;
+      padding-top: 70px;
+      background-position: 15px 21px;
+    }
+  }
+}
+
+@media all and (max-width: $media-xs-small) {
+  .service {
+    margin-bottom: 40px;
+    padding-top: 50px;
+    background-position: center 39%;
+
+    &__order {
+      p {
+        width: 260px;
+
+        &:last-child {
+          @include convertToRem(30, 30);
+        }
+      }
+    }
+
+    &__item {
+
+      &:nth-child(2) {
+        margin-top: 300px;
+      }
+
+      &--leftside {
+        text-align: left;
+      }
+
+      &--rightside {
+        text-align: right;
+      }
+    }
+  }
+}

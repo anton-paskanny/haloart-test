@@ -1,0 +1,86 @@
+.fixed-form {
+  position: fixed;
+  top: 25%;
+  left: -321px;
+  width: 321px;
+  font-size: 0;
+  text-align: center;
+  z-index: 1;
+
+  &__content,
+  &__button {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__content {
+    width: 321px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    border: 1px solid #c8c8c8;
+    border-bottom-right-radius: 5px;
+    background-color: #fff;
+  }
+
+  // button
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+    background: $pallete-primary url('../img/fixed-form/linear-bg.jpg') no-repeat center center;
+    background-size: cover;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 2px solid #0568b5;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    transform: rotate(90deg);
+    padding: 10px;
+    border-bottom: 1.5px solid #0a6cb7;
+
+    div {
+      width: 30px;
+      height: 30px;
+      line-height: 28px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: $pallete-primary url('../img/fixed-form/linear-button-bg.png') no-repeat center center;
+    }
+
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      fill: #fff;
+    }
+  }
+
+  &__action-text {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 18px;
+    border-right: 2px solid #21baf9;
+
+    p {
+
+      font-weight: bold;
+      @include convertToRem(14, 14);
+      color: #fff;
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .fixed-form {
+    left: -372px;
+  }
+}

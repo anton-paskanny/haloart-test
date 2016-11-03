@@ -1,0 +1,4 @@
+@mixin convertToRem($fs, $lh) {
+	font-size: ($fs / 16) + rem;
+	line-height: ($lh / 16) + rem;
+}

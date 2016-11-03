@@ -1,0 +1,28 @@
+// fonts
+$OpenSans: "Open Sans", sans-serif;
+$InglobalBoldItalic: "InglobalBoldItalic";
+
+$base-font-size: 1rem;
+$base-line-height: 1rem;
+
+// colors
+$x-pallete-blue: #0694f8;
+$x-pallete-red: #ff431e;
+$x-pallete-dark-1: #282828;
+$x-pallete-dark-2: #505050;
+$x-pallete-gray: #969696;
+
+$pallete-primary: $x-pallete-blue;
+$pallete-secondary: $x-pallete-red;
+$pallete-text: $x-pallete-dark-1;
+$pallete-title: $x-pallete-dark-2;
+$pallete-form-text: $x-pallete-dark-2;
+$pallete-menu-links: $x-pallete-gray;
+$pallete-inputs: $x-pallete-gray;
+
+// breakpoints
+$media-large: 1000px;
+$media-medium: 800px;
+$media-xs-medium: 610px;
+$media-small: 425px;
+$media-xs-small: 320px;

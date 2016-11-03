@@ -1,0 +1,22 @@
+doctype html
+include ./includes/head.pug
+body
+  include ../blocks/fixed-form/fixed-form.pug
+  div(class="container")
+    include ../blocks/header/header.pug
+    include ../blocks/divider/divider.pug
+    +divider("red", "Крути<br>вниз", "description")
+    include ../blocks/description/description.pug
+    +divider("blue", "Зачем<br>мне это?", "partners")
+  include ../blocks/partners/partners.pug
+  div(class="container")
+    +divider("blue", "А что<br>есть?", "service")
+    include ../blocks/service/service.pug
+    +divider("red", "А где?", "location")
+  include ../blocks/location/location.pug
+  include ../blocks/footer/footer.pug
+  div(class="overlay")
+    include ../blocks/popup/popup.pug
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAzSMZLIeXk7nq16vkCO82wjB4Zoy0f_A&v=3.exp")
+  script(src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous")
+  script(src="scripts/index.min.js")

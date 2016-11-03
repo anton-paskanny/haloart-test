@@ -1,0 +1,293 @@
+.partners {
+  position: relative;
+  min-height: 1085px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  background-image: url('../img/partners/desks-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  &__title {
+    padding-top: 100px;
+    font-family: $InglobalBoldItalic;
+    @include convertToRem(30, 30);
+    color: #b76c00;
+    text-align: center;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 73.26530612244898%; // 718 : 980
+    max-width: 718px;
+    height: 445px;
+    transform: translateX(-52%);
+  }
+
+  &__item {
+    position: absolute;
+    display: block;
+
+    &--henkel {
+      top: 4.269662921348315%; // 19 : 445
+      left: 8.077994428969359%; // 58 : 718
+      width: 26.88022284122563%; // 193 : 718
+      max-width: 193px;
+      z-index: 4;
+    }
+
+    &--jungheinrich {
+      top: 31.23595505617978%; // 139 : 445
+      left: 0;
+      width: 26.18384401114206%; // 188 : 718
+      max-width: 188px;
+      z-index: 1;
+    }
+
+    &--strabag {
+      top: 56.04395604395604%; // 255 : 445
+      left: 15.18105849582173%; // 109 : 718
+      width: 26.74094707520891%; // 192 : 178
+      max-width: 192px;
+      z-index: 2;
+    }
+
+    &--ikea {
+      top: 25.84269662921348%; // 115 : 445
+      left: 28.96935933147632%; // 208 : 718
+      width: 26.88022284122563%; // 193 : 718
+      max-width: 193px;
+      z-index: 3;
+    }
+
+    &--pentax {
+      top: 55.95505617977528%; // 249 :445
+      left: 44.42896935933148%; // 319 : 718
+      width: 25.90529247910864%; // 186 : 718
+      max-width: 186px;
+      z-index: 2;
+    }
+
+    &--vamed {
+      top: 28.31460674157303%; // 126 : 445
+      left: 55.71030640668524%; // 400 : 718
+      width: 26.74094707520891%; // 192 : 178
+      max-width: 192px;
+      z-index: 3;
+    }
+
+    &--institut {
+      top: 47.64044943820225%; // 212 : 445
+      right: 0;
+      width: 27.85515320334262%; // 200 :718
+      max-width: 200px;
+      z-index: 1;
+    }
+
+    &--gazprom {
+      top: 0px;
+      right: 0px;
+      width: 28.83008356545961%; // 207 : 718
+      max-width: 207px;
+      z-index: 4;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__order {
+    position: absolute;
+    top: 530px;
+    left: 50%;
+    width: 966px;
+    margin-left: -483px;
+    height: 555px;
+    background-image: url('../img/partners/macbook.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    // transform: translateX(-50%);
+  }
+
+  &__inner {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 68.53002070393375%; // 662 : 980
+    height: 414px;
+    margin-left: -33.77551020408163%;
+    padding-top: 40px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+    font-family: $InglobalBoldItalic;
+    @include convertToRem(24, 24);
+    color: #000;
+    text-align: center;
+  }
+
+  &__desc {
+    text-align: center;
+
+    span {
+      display: block;
+
+      &:first-child {
+        @include convertToRem(36, 36);
+        color: $pallete-text;
+      }
+
+      &:last-child {
+        @include convertToRem(18, 30);
+      }
+    }
+
+    strong {
+      font-weight: bold;
+      color: $pallete-secondary;
+    }
+  }
+
+  &__divider {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__form {
+    width: 240px;
+    margin: 0 auto;
+
+    &-input {
+      width: 100%;
+      display: block;
+      padding: 12px 14px;
+      font-weight: bold;
+      @include convertToRem(12, 12);
+      color: $pallete-inputs;
+      border: 1px solid #c8c8c8;
+      border-radius: 5px;
+      box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.25);
+      outline: none;
+
+      &:first-child {
+        margin-top: 20px;
+        margin-bottom: 12px;
+      }
+    }
+
+    .errorForm {
+      border-color: #e12c29;
+      box-shadow: inset 0px 0px 8px rgba(225, 44, 41, 0.25);
+    }
+
+    &-submit {
+      width: 100%;
+      margin-top: 20px;
+      padding: 6px 0;
+      @include convertToRem(14, 24);
+      font-weight: bold;
+      background-color: $pallete-primary;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      border-bottom: 3px solid #0568b5;
+      outline: none;
+    }
+  }
+}
+
+@media all and (max-width: $media-large) {
+  .partners {
+    &__order {
+      left: 0;
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+@media all and (max-width: $media-medium) {
+  .partners {
+    &__order {
+      width: 100%;
+    }
+
+    &__wrapper {
+      width: 100%;
+    }
+  }
+}
+
+@media all and (max-width: $media-xs-medium) {
+  .partners {
+    &__title {
+      padding-top: 80px;
+      @include convertToRem(20, 20);
+    }
+
+    &__wrapper {
+      top: 20px;
+    }
+
+    &__order {
+      top: 460px;
+    }
+
+    &__inner {
+      top: 2%;
+    }
+  }
+}
+
+@media all and (max-width: $media-small) {
+  .partners {
+    min-height: 800px;
+    margin-bottom: 200px;
+
+    &__wrapper {
+      height: 290px;
+    }
+
+    &__order {
+      top: 340px;
+    }
+
+    &__inner {
+      position: relative;
+      left: 0;
+      width: 260px;
+      margin: 0 auto;
+      margin-top: 35px;
+      padding: 0;
+    }
+
+    &__title {
+      padding-top: 60px;
+      @include convertToRem(18, 18);
+    }
+
+    &__item {
+      &--henkel {
+        left: 3.077994%;
+      }
+
+      &--gazprom {
+        right: -2%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: $media-xs-small) {
+  .partners {
+    margin-top: 30px;
+    margin-bottom: 95px;
+  }
+}

@@ -1,0 +1,62 @@
+.form {
+  padding: 0 40px;
+
+  &__title {
+    font-weight: bold;
+    @include convertToRem(18, 24);
+    color: $pallete-title;
+  }
+
+  &__desc {
+    @include convertToRem(14, 24);
+    color: $pallete-form-text;
+  }
+
+  &__input {
+    width: 100%;
+    display: block;
+    padding: 12px 14px;
+    font-weight: bold;
+    @include convertToRem(12, 12);
+    color: $pallete-inputs;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.25);
+    outline: none;
+
+    &:first-child {
+      margin-top: 20px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .errorForm {
+    border-color: #e12c29;
+    box-shadow: inset 0px 0px 8px rgba(225, 44, 41, 0.25);
+  }
+
+  &__submit {
+    width: 100%;
+    margin-top: 20px;
+    padding: 6px 0;
+    @include convertToRem(14, 24);
+    font-weight: bold;
+    background-color: $pallete-primary;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 3px solid #0568b5;
+    outline: none;
+  }
+
+  &__divider {
+    margin-top: 30px;
+    margin-bottom: 28px;
+  }
+
+  &__number {
+    font-weight: bold;
+    @include convertToRem(24, 36);
+    color: $pallete-primary;
+  }
+}
