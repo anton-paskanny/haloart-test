@@ -1,2 +1,2 @@
 # haloart-test
-https://anton-paskannyi.github.io/haloart-test/dist/
+https://anton-paskanny.github.io/haloart-test/dist/
